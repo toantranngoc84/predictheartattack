@@ -39,7 +39,7 @@ df['Gender'] = df['Gender'].apply(lambda x: 'Male' if x == 1 else 'Female')
 
 st.title("Myocardial Infarction")
 st.write("")
-st.video("Recognizing a heart Attack  3D animation Heart attack signs and symptoms.mp4")
+st.video("videos/Recognizing a heart Attack  3D animation Heart attack signs and symptoms.mp4")
 
 
 # _____________________MAP_____________________
@@ -70,7 +70,7 @@ with col1:
     st.write('A heart attack is a life-threatening emergency. If you think you or someone you’re with is having a heart attack, call 911 (or your local emergency services phone number). Time is critical in treating a heart attack. A delay of even a few minutes can result in permanent heart damage or death.')
 
 with col2:
-    st.image("HeartAttack.jpg")
+    st.image("pictures/HeartAttack.jpg")
 
 
 st.write('')
@@ -268,11 +268,11 @@ result_counts = df_selection['Result'].value_counts()
 gender_counts = df_selection['Gender'].value_counts()
 
 fig_result_pie = px.pie(values=result_counts.values, names=result_counts.index,
-                        #title='Distribution of Myocardial Infarction Results',
+                        #title='Distribution of Gender',
                         labels={'names': 'Result', 'values': 'Count'})
 
 fig_gender_pie = px.pie(values=gender_counts.values, names=gender_counts.index,
-                        title='Distribution of Gender',
+                        #title='Distribution of Gender',
                         labels={'names': 'Gender', 'values': 'Count'})
 
 #st.subheader('Distribution of Myocardial Infarction and Gender')
@@ -298,8 +298,10 @@ with col4:
 
 # _____________________MACHINE LEARNING MODEL_____________________
 
-st.image("Heartbeat.png")
+st.write("")
 st.header("Prediction of Myocardial Infarction")
+st.image("pictures/Heartbeat.png")
+
 st.write("")
 st.write("After entering the parameters, the selected machine learning model calculates the probability of a heart attack.")
 
@@ -385,13 +387,13 @@ st.write('**How can I lower my risk?**')
 st.write('')
 st.write('Although several risk factors can’t be modified, there are many ways you can help yourself and reduce your risk of a heart attack. These include:')
 st.markdown("""
-- Chest pain (angina)
-- Shortness of breath or trouble breathing
-- Trouble sleeping (insomnia)
-- Nausea or stomach discomfort
-- Heart palpitations
-- Anxiety or a feeling of “impending doom.”
-- Feeling lightheaded, dizzy or passing out.
+- Don't smoke or use tobacco
+- Get moving: Aim for at least 30 to 60 minutes of activity daily
+- Eat a heart-healthy diet
+- Maintain a healthy weight
+- Get quality sleep
+- Manage stress
+- Get regular health screening tests
     """)
 
 
