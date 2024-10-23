@@ -1,0 +1,7 @@
+geopandas
+imbalanced_learn
+matplotlib
+numpy
+pandas
+plotly
+scikit_learn
