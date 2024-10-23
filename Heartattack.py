@@ -3,6 +3,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 
 import plotly.express as px
 import plotly.graph_objects as go
@@ -18,9 +19,10 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 
 # _____________________IMPORT DATASETS_____________________
+print("Current Working Directory:", os.getcwd())
 
-df = pd.read_csv('/Users/toan/Arbeit/Ironhack/Miniproject/final_project/data/cleaned/df_ml_AgeGroup.csv')
-df_ml = pd.read_csv('/Users/toan/Arbeit/Ironhack/Miniproject/final_project/data/cleaned/Medicaldataset_cleaned.csv')
+df = pd.read_csv('data/cleaned/df_ml_AgeGroup.csv')
+df_ml = pd.read_csv('data/cleaned/Medicaldataset_cleaned.csv')
 
 
 # _____________________EDIT DATASET_____________________
